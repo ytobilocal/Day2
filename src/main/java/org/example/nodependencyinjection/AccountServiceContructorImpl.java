@@ -1,9 +1,13 @@
-package org.example.pojo;
+package org.example.nodependencyinjection;
 
-public class AccountServiceImpl implements AccountService{
+import org.example.pojo.Account;
+import org.example.pojo.AccountRepository;
+import org.example.pojo.AccountService;
+
+public class AccountServiceContructorImpl implements AccountService {
     private AccountRepository accountRepository;
 
-    public void setAccountRepository(AccountRepository accountRepository){
+    public AccountServiceContructorImpl (AccountRepository accountRepository){
         this.accountRepository = accountRepository;
     }
 
@@ -29,3 +33,4 @@ public class AccountServiceImpl implements AccountService{
         return accountRepository.find(accountId);
     }
 }
+

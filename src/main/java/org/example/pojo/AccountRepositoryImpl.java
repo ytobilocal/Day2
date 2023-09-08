@@ -3,7 +3,7 @@ package org.example.pojo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountRepoaitoryImpl implements AccountRepository{
+public class AccountRepositoryImpl implements AccountRepository{
     private Map<Long,Account> accountsMap = new HashMap<>();
 
     {
